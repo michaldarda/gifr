@@ -1,29 +1,25 @@
-# Gifr
+## Gifr
 
-TODO: Write a gem description
+Command line tool to easily create animated gifs from movie trailers.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'gifr'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gifr
+You can later share them instantly on imgbur
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ gifr video.mp4 --from 1h1s3s --to 1h1m10s mygif.gif
 
-## Contributing
+Available options:
 
-1. Fork it ( http://github.com/<my-github-username>/gifr/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+
+    --keep - keep generated gifs in tmp
+
+    --keep-dir - keep generated gifs in specified dir
+
+    --dont-share - dont share image on imgbur
+
+## License
+
+Copyright &copy; 2014 Michal Darda <michaldarda@gmail.com>
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
