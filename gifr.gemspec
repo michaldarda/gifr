@@ -24,5 +24,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "aruba"
 
   spec.add_dependency "rmagick"
-  spec.add_dependency "ffmpeg"
 end
