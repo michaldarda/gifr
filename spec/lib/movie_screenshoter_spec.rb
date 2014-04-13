@@ -1,3 +1,4 @@
+require_relative '../spec_helper'
 require_relative '../../lib/gifr/movie_screenshoter'
 
 describe MovieScreenshoter do
