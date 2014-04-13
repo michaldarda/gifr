@@ -1,8 +1,6 @@
 ## Gifr
 
-Command line tool to easily create animated gifs from movie trailers.
-
-You can later share them instantly on imgbur
+Command line tool to easily create animated gifs from movies.
 
 ## Requirements
 
@@ -16,7 +14,7 @@ On Ubuntu (14.04), please install
 
 ## Usage
 
-    $ gifr video.mp4 --start 00:00:00 --time 7
+    $ gifr video.mp4 -s 00:00:00 -t 7
 
 ## License
 
