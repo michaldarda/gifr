@@ -1,13 +1,15 @@
-class Movie < Struct.new(:path)
+class Movie
+  def initialize(options = {})
+    @path = options.fetch(:filename)
+
+    raise ArgumentError unless File.exists?(@path)
+  end
+
   def length
-    @length ||= %x{ ffprobe
-      -v quiet
-      -show_entries
-      format=duration #{to_s} | grep duration
-    }.match(/(duration=)(\d+)(.\d+)/)[2]
+    @length ||= Integer(%x{ ffprobe -v quiet -show_entries format=duration #{to_s} | grep duration }.match(/(duration=)(\d+)(.\d+)/)[2])
   end
 
   def to_s
-    "#{path}"
+    "#{@path}"
   end
 end
