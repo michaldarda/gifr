@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Gifr::VERSION
   spec.authors       = ["Michał Darda"]
   spec.email         = ["michaldarda@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Simple solution to create gifs from short movies.}
+  spec.description   = %q{Simple solution to create gifs from short movies.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

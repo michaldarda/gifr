@@ -20,13 +20,11 @@ OptionParser.new do |opts|
     options[:to] = v
   end
 
-  opts.on("-f", "--file", "") do |v|
-    options[:file] = v
-  end
-
   opts.on("-s", "--size", "") do |v|
     options[:size] = v
   end
 end.parse!
 
 filename = ARGV.pop
+
+options.merge!(filename: filename)
