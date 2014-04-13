@@ -11,12 +11,21 @@ describe OptionsValidator do
     options = {
       from: 'invalidtimestring',
       to: 'invalidtimestring',
+    }
+
+    validator = OptionsValidator.new(options)
+    expect(validator.validate!.keys).to match_array([:filename])
+  end
+
+  it 'takes no filename, returns hash of errors' do
+    options = {
+      from: 'invalidtimestring',
+      to: 'invalidtimestring',
       filename: 'video.mp4'
     }
 
-
     validator = OptionsValidator.new(options)
-    expect(validator.validate!.keys).to match_array([:to, :from])
+    expect(validator.validate!.keys).to match_array([:from, :to])
   end
 
   it 'takes correct options, returns no errors at all' do

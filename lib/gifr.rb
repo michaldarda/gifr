@@ -1,2 +1,2 @@
-require "gifr/version"
-require "gifr/options_parser"
+require_relative "./gifr/version"
+require_relative "./gifr/options_validator"
