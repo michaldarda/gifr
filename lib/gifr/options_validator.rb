@@ -16,8 +16,8 @@ class OptionsValidator
 
     return @errors if @errors.any?
 
-    TimeParser.parse(@options[:from]) { @errors[:from] = "From time in incorrect format"}
-    TimeParser.parse(@options[:to]) { @errors[:to] = "To time in incorrect format" }
+    TimeParser.new(@options[:from]).validate! { @errors[:from] = "From time in incorrect format"}
+    TimeParser.new(@options[:to]).validate! { @errors[:to] = "To time in incorrect format" }
 
     return @errors
   end
