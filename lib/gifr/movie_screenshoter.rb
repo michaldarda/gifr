@@ -16,10 +16,4 @@ class MovieScreenshoter
       "/tmp/gifr_#{Pathname.new(@movie.to_s).basename}_#{i+1}.png"
     end
   end
-
-  def cleanup!
-    screenshots.each do |screenshot|
-      %x[ rm -r -f /tmp/#{screenshot} ]
-    end
-  end
 end
