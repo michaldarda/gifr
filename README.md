@@ -4,6 +4,16 @@ Command line tool to easily create animated gifs from movie trailers.
 
 You can later share them instantly on imgbur
 
+## Requirements
+
+On Ubuntu (14.04), please install
+
+    $ sudo add-apt-repository ppa:samrog131/ppa
+
+    $ sudo apt-get update
+
+    $ sudo apt-get install ffmpeg-real
+
 ## Usage
 
     $ gifr video.mp4 --from 1h1s3s --to 1h1m10s mygif.gif
