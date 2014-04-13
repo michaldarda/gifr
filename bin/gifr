@@ -12,16 +12,12 @@ parser = OptionParser.new do |opts|
     exit(0)
   end
 
-  opts.on("-f n", "--from=n", "") do |v|
-    options[:from] = v
+  opts.on("-s n", "--start=n", "") do |v|
+    options[:start] = v
   end
 
-  opts.on("-t n", "--to=n", "") do |v|
-    options[:to] = v
-  end
-
-  opts.on("-s n", "--size=n", "") do |v|
-    options[:size] = v
+  opts.on("-t n", "--time=n", "") do |v|
+    options[:time] = v
   end
 end
 
@@ -35,5 +31,6 @@ errors = OptionsValidator.new(options).validate!
 
 if errors.any?
   puts parser.banner
+  puts errors
   exit(1)
 end

@@ -1,6 +1,3 @@
-require 'time'
-require_relative 'time_parser'
-
 class OptionsValidator
   attr_reader :errors
 
@@ -10,15 +7,10 @@ class OptionsValidator
   end
 
   def validate!
-    @options.fetch(:from) { @errors[:from] = "You must provide from" }
-    @options.fetch(:to) { @errors[:to] = "You must provide to" }
+    @options.fetch(:start) { @errors[:start] = "You must provide start" }
+    @options.fetch(:time) { @errors[:time] = "You must provide time" }
     @options.fetch(:filename) { @errors[:filename] = "You must provide filename" }
 
-    return @errors if @errors.any?
-
-    TimeParser.new(@options[:from]).validate! { @errors[:from] = "From time in incorrect format"}
-    TimeParser.new(@options[:to]).validate! { @errors[:to] = "To time in incorrect format" }
-
-    return @errors
+    @errors
   end
 end
