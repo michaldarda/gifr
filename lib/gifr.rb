@@ -1,2 +1,5 @@
 require_relative "./gifr/version"
 require_relative "./gifr/options_validator"
+require_relative "./gifr/movie"
+require_relative "./gifr/movie_screenshoter"
+require_relative "./gifr/gif_creator"

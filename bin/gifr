@@ -34,3 +34,18 @@ if errors.any?
   puts errors
   exit(1)
 end
+
+begin
+  movie = Movie.new(options)
+rescue ArgumentError
+  puts "Given file does not exists"
+  exit(1)
+end
+
+movie_screenshoter = MovieScreenshoter.new(movie, options)
+
+movie_screenshoter.take_screenshots!
+
+gif_creator = GifCreator.new(movie_screenshoter.screenshots)
+
+gif_creator.make_gif!
