@@ -19,6 +19,10 @@ parser = OptionParser.new do |opts|
   opts.on("-t n", "--time=n", "") do |v|
     options[:time] = v
   end
+
+  opts.on("-d n", "--delay=n", "") do |v|
+    options[:delay] = v
+  end
 end
 
 parser.parse!
