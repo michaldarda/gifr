@@ -1,4 +1,4 @@
-Feature: ue can view an usage screen
+Feature: User can view an usage screen
   Scenario: Viewing help screen
     When I successfully run `gifr -h`
     Then the exit status should be 0

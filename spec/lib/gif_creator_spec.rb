@@ -9,7 +9,7 @@ describe GifCreator do
     movie_screenshoter.take_screenshots!
     screenshots = movie_screenshoter.screenshots
 
-    gif_creator = GifCreator.new(screenshots)
+    gif_creator = GifCreator.new(screenshots, { output: "video.gif" })
     gif_creator.make_gif!
 
     expect(File.exists?("video.gif")).to eq true

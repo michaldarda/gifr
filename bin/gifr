@@ -23,9 +23,10 @@ end
 
 parser.parse!
 
-filename = ARGV.pop
+filename = ARGV.shift
+output = ARGV.shift || "#{filename}.gif"
 
-options.merge!(filename: filename)
+options.merge!(filename: filename, output: output)
 
 errors = OptionsValidator.new(options).validate!
 
@@ -46,6 +47,6 @@ movie_screenshoter = MovieScreenshoter.new(movie, options)
 
 movie_screenshoter.take_screenshots!
 
-gif_creator = GifCreator.new(movie_screenshoter.screenshots)
+gif_creator = GifCreator.new(movie_screenshoter.screenshots, options)
 
 gif_creator.make_gif!

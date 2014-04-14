@@ -2,12 +2,13 @@ require 'RMagick'
 include Magick
 
 class GifCreator
-  def initialize(gifs = [])
+  def initialize(gifs = [], options = {})
     @gifs = ImageList.new(*gifs)
+    @output = options.fetch(:output)
   end
 
   def make_gif!
     @gifs.delay = 20
-    @gifs.write("video.gif")
+    @gifs.write(@output)
   end
 end
