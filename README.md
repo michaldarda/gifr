@@ -25,7 +25,7 @@ Type:
 
 ## Contributing
 
-1. Fork it ( http://github.com/michaldarda/gifr/fork )
+1. Fork it (http://github.com/michaldarda/gifr/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -33,4 +33,4 @@ Type:
 
 ## License
 
-Copyright AT&T 2014 Michal Darda <michaldarda@gmail.com>
+Copyright &copy; 2014 Michal Darda <michaldarda@gmail.com>
