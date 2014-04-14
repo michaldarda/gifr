@@ -21,7 +21,15 @@ Type:
 
 ## Usage
 
-    $ gifr video.mp4 -s 00:00:00 -t 7
+    $ gifr video.mp4 -s 00:00:00 -t 7 output.gif
+
+Available options
+
+`-s or --start` moment int movie to start in format `hh:mm:ss`
+`-t or --time` how long should animated gif last
+
+You can optionally provide also:
+`-d or --delay` the speed of gif's animation, default is 20
 
 ## Contributing
 
@@ -30,6 +38,8 @@ Type:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+When submiting your PR please make sure you've added tests and they are passing.
 
 ## License
 
