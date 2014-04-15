@@ -12,4 +12,12 @@ class Movie
   def to_s
     "#{@path}"
   end
+
+  def to_path
+    Pathname.new(@path)
+  end
+
+  def filename
+    to_path.basename
+  end
 end
