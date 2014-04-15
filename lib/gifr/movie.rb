@@ -10,7 +10,7 @@ class Movie
   end
 
   def to_s
-    "#{@path}"
+    "#{to_path}"
   end
 
   def to_path
